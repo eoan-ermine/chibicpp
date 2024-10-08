@@ -23,3 +23,17 @@ sudo apt-get install libfmt-dev
 cmake -S . -B build
 cmake --build build
 ```
+
+# Executing the Tests
+
+Testing is performed when the check-all target is built. For instance, if you are using Makefiles, execute this command in the root of your build directory:
+
+```shell
+make check-all
+```
+
+Or, with conan presets:
+
+```shell
+cmake --build --preset conan-release -t check-all
+```
